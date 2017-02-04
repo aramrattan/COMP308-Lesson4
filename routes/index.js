@@ -8,16 +8,35 @@ let currentDate = new Date();
 /* GET home page. wildcard */
 router.get('/', (req, res, next) => {
   res.render('index', {
-    title: 'Express',
-    date: currentDate
+    title: 'Home'
    });
 });
 
 /* GET about page. */
 router.get('/about', (req, res, next) => {
-  res.render('about', {
+  res.render('content/about.ejs', {
     title: 'About'
    });
 });
+/* GET services page. */
+router.get('/services', (req, res, next) => {
+  res.render('content/services.ejs', {
+    title: 'Services'
+   });
+});
+/* GET about page. */
+router.get('/projects', (req, res, next) => {
+  res.render('content/projects.ejs', {
+    title: 'Projects'
+   });
+});
+/* GET about page. */
+router.get('/contact', (req, res, next) => {
+  res.render('content/contact.ejs', {
+    title: 'Contact'
+   });
+});
+
+
 
 module.exports = router;
